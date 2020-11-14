@@ -1,15 +1,19 @@
+#pragma once
 #ifndef CARGO_H
 #define CARGO_H
-#include "string"
-#include "vector"
-#include "queue"
-
-using namespace std;
 
 class Cargo
 {
     public:
-        vector <vector < double > > cargoData;
+        int cargoType;
+        double cargoWeight;
+        double cargoSize;//m3
+        int cargoId;
+        double minTemp;
+        double maxTemp;
+
+        int genId();
+      /*  vector <vector < double > > cargoData;
         string cargoType;
         double cargoWeight;
         double cargoSize;
@@ -18,7 +22,7 @@ class Cargo
         int cargoTypeConvert(string cargoType);
         string posibilityOfShipping(string cargoType, double cargoWeight, double cargoSize, pair <int, int > cargoTemperature, int cargoHumidity);
         vector <int> cargoGroups(bool flag = false);
-        Cargo();
+        Cargo();*/
 
 };
 
