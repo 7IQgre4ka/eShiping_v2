@@ -1,25 +1,24 @@
 #ifndef CARGO_H
 #define CARGO_H
-#include "string"
-#include "vector"
-#include "queue"
 
-using namespace std;
+#include "vector"
+#include "string"
+
 
 class Cargo
 {
     public:
-        vector <vector < double > > cargoData;
-        string cargoType;
+        std::vector < std::vector < double > > cargoData;
+        std::string cargoType;
         double cargoWeight;
-        double cargoSize;
-        pair <int, int > cargoTemperature;
-        int cargoHumidity;
-        int cargoTypeConvert(string cargoType);
-        string posibilityOfShipping(string cargoType, double cargoWeight, double cargoSize, pair <int, int > cargoTemperature, int cargoHumidity);
-        vector <int> cargoGroups();
-        Cargo();
+        double cargoSize;//m3
+        //std :: pair <int, int > cargoTemperature;
+        //int cargoId;
+        double minTemp;
+        double maxTemp;
+        double cargoHumidity;
 
+        int genId();
 };
 
 #endif // CARGO_H
