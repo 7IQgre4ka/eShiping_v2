@@ -103,5 +103,5 @@ int isSuitableForShipping(Cargo cargo)
         }
         return 2;
 }
-}
+
 
