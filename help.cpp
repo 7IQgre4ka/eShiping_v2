@@ -103,5 +103,33 @@ int isSuitableForShipping(Cargo cargo)
         }
         return 2;
 }
+std::vector <int> hl::cargoGroups()
+{
+    std::vector <int> group;
+    bool flag = false;
+    int currentLowestTemp = INT_MAX;
+    double currentWeight = 0;
+    double currentSize = 0;
+    sort(cargoData.begin(), cargoData.end());
+    for(int i = 0;i < cargoData.size();i++)
+    {
+        if(currentWeight >= 70000 || currentSize >= 475)
+        {
+            group.erase(group.end() - 1);
+            return group;
+        }
+        if(flag == false && currentLowestTemp == INT_MAX)
+        {
+            currentLowestTemp = cargoData[i][0];
+            flag = true;
+        }
+        if(flag == true && abs(cargoData[i][0] - currentLowestTemp) < 5)
+        {
+            currentWeight += cargoData[i][2];
+            currentSize += cargoData[i][1];
+            group.push_back(cargoData[i][7]);
+            //hell
+        }
+    }
 }
 
