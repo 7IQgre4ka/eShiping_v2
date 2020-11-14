@@ -42,4 +42,8 @@ int cargoTypeConvert(std::string cargoType)
     return cargoTypeInt;
 }
 
+int isSuitableForShipping(Cargo cargo){
+
+}
+
 }
