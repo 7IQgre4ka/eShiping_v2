@@ -1,19 +1,24 @@
 #pragma once
 #ifndef CARGO_H
 #define CARGO_H
+#include "vector"
+#include "string"
 
 class Cargo
 {
     public:
-        int cargoType;
+        std::vector < std::vector < double > > cargoData;
+        std::string cargoType;
         double cargoWeight;
         double cargoSize;//m3
+        //std :: pair <int, int > cargoTemperature;
         int cargoId;
         double minTemp;
         double maxTemp;
+        double cargoHumidity;
 
         int genId();
-      /*  vector <vector < double > > cargoData;
+      /*
         string cargoType;
         double cargoWeight;
         double cargoSize;
