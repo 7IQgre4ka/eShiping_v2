@@ -129,7 +129,6 @@ vector <int> Cargo :: cargoGroups()
             currentWeight += cargoData[i][2];
             currentSize += cargoData[i][1];
             group.push_back(cargoData[i][7]);
-            //hell
         }
     }
 
