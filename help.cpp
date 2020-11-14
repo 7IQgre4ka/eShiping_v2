@@ -37,7 +37,7 @@ int typeConvert(std::string cargoType)
     {
       cargoTypeInt = 8;
     }
-
+//
 
     return cargoTypeInt;
 }
