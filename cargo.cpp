@@ -1,4 +1,6 @@
 #include "cargo.h"
+#include <algorithm>
+#include <time.h>
 
 using namespace std;
 
@@ -45,7 +47,7 @@ int Cargo :: cargoTypeConvert(string cargoType)
 string Cargo :: posibilityOfShipping(string cargoType, double cargoWeight, double cargoSize, pair <int, int > cargoTemperature, int cargoHumidity)
 {
     int cargoTypeInt = cargoTypeConvert(cargoType);
-    vector <double> tmpVectorPush(7);
+    vector <double> tmpVectorPush(8);
     //0 - green; 1 - orange; 2 - red
     switch(cargoTypeInt)
     {
@@ -81,6 +83,9 @@ string Cargo :: posibilityOfShipping(string cargoType, double cargoWeight, doubl
     tmpVectorPush[4] = cargoTemperature.second;
     tmpVectorPush[5] = cargoHumidity;
     tmpVectorPush[6] = cargoTypeInt;
+    srand (time(NULL));
+    int tmp = (int)(size_t)rand % 1000000;
+    tmpVectorPush[7] = tmp;
 
     if(tmpVectorPush[3] == 2)
     {
@@ -99,5 +104,32 @@ string Cargo :: posibilityOfShipping(string cargoType, double cargoWeight, doubl
     return "Red";
 }
 
+vector <int> Cargo :: cargoGroups()
+{
+    vector <int> group;
+    bool flag = false;
+    int currentLowestTemp = INT_MAX;
+    double currentWeight = 0;
+    double currentSize = 0;
+    sort(cargoData.begin(), cargoData.end());
+    /*for(int i = 0;i < cargoData.size();i++)
+    {
+        if(currentWeight >= 70000 || currentSize >= 475)
+        {
+
+        }
+        if(flag == false && currentLowestTemp == INT_MAX)
+        {
+            currentLowestTemp = cargoData[i][0];
+            flag = true;
+        }
+        if(flag == true && abs(cargoData[i][0] - currentLowestTemp) < 5)
+        {
+            currentWeight += cargoData[i][2];
+            currentSize += cargoData[i][1];
+            group.push_back(cargoData[7]);
+        }
+    }*/
+}
 
 

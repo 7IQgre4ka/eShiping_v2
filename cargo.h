@@ -17,7 +17,7 @@ class Cargo
         int cargoHumidity;
         int cargoTypeConvert(string cargoType);
         string posibilityOfShipping(string cargoType, double cargoWeight, double cargoSize, pair <int, int > cargoTemperature, int cargoHumidity);
-        vector <int> cargoGroups(bool flag = false);
+        vector <int> cargoGroups();
         Cargo();
 
 };
