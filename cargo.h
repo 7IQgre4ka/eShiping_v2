@@ -12,7 +12,7 @@ class Cargo
         double cargoWeight;
         double cargoSize;//m3
         //std :: pair <int, int > cargoTemperature;
-        int cargoId;
+        //int cargoId;
         double minTemp;
         double maxTemp;
         double cargoHumidity;
