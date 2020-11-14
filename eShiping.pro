@@ -16,6 +16,7 @@ SOURCES += \
 
 HEADERS += \
     cargo.h \
+    defines.h \
     help.h \
     mainwindow.h
 

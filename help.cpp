@@ -2,7 +2,7 @@
 
 namespace hl {
 
-int cargoTypeConvert(std::string cargoType)
+int typeConvert(std::string cargoType)
 {
   int cargoTypeInt;
   if(cargoType == "Medicines")
