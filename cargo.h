@@ -3,13 +3,22 @@
 #include "string"
 #include "vector"
 #include "queue"
+#include <help.h>
 
 using namespace std;
 
 class Cargo
 {
     public:
-        vector <vector < double > > cargoData;
+        int cargoType;
+        double cargoWeight;
+        double cargoSize;//m3
+        int cargoId;
+        double minTemp;
+        double maxTemp;
+
+        string posibilityOfShipping(string cargoType, double cargoWeight, double cargoSize, pair <int, int > cargoTemperature, int cargoHumidity);
+      /*  vector <vector < double > > cargoData;
         string cargoType;
         double cargoWeight;
         double cargoSize;
@@ -18,7 +27,7 @@ class Cargo
         int cargoTypeConvert(string cargoType);
         string posibilityOfShipping(string cargoType, double cargoWeight, double cargoSize, pair <int, int > cargoTemperature, int cargoHumidity);
         vector <int> cargoGroups(bool flag = false);
-        Cargo();
+        Cargo();*/
 
 };
 

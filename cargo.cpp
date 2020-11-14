@@ -2,49 +2,10 @@
 
 using namespace std;
 
-int Cargo :: cargoTypeConvert(string cargoType)
-{
-  int cargoTypeInt;
-  if(cargoType == "Medicines")
-    {
-      cargoTypeInt = 1;
-    }
-  if(cargoType == "Valuable paintings")
-    {
-      cargoTypeInt = 2;
-    }
-  if(cargoType == "Animals")
-    {
-      cargoTypeInt = 3;
-    }
-  if(cargoType == "Liquid")
-    {
-      cargoTypeInt = 4;
-    }
-  if(cargoType == "Medicines with narco")
-    {
-      cargoTypeInt = 5;
-    }
-  if(cargoType == "Luxury products")
-    {
-      cargoTypeInt = 6;
-    }
-  if(cargoType == "Military items")
-    {
-      cargoTypeInt = 7;
-    }
-  if(cargoType == "Flowers")
-    {
-      cargoTypeInt = 8;
-    }
-
-
-    return cargoTypeInt;
-}
 
 string Cargo :: posibilityOfShipping(string cargoType, double cargoWeight, double cargoSize, pair <int, int > cargoTemperature, int cargoHumidity)
 {
-    int cargoTypeInt = cargoTypeConvert(cargoType);
+    int cargoTypeInt = hl::cargoTypeConvert(cargoType);
     vector <double> tmpVectorPush(7);
     //0 - green; 1 - orange; 2 - red
     switch(cargoTypeInt)
