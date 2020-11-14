@@ -19,7 +19,6 @@ class Cargo
         string posibilityOfShipping(string cargoType, double cargoWeight, double cargoSize, pair <int, int > cargoTemperature, int cargoHumidity);
         vector <int> cargoGroups();
         Cargo();
-
 };
 
 #endif // CARGO_H
