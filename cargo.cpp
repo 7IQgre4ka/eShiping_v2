@@ -112,11 +112,12 @@ vector <int> Cargo :: cargoGroups()
     double currentWeight = 0;
     double currentSize = 0;
     sort(cargoData.begin(), cargoData.end());
-    /*for(int i = 0;i < cargoData.size();i++)
+    for(int i = 0;i < cargoData.size();i++)
     {
         if(currentWeight >= 70000 || currentSize >= 475)
         {
-
+            group.erase(group.end() - 1);
+            return group;
         }
         if(flag == false && currentLowestTemp == INT_MAX)
         {
@@ -127,9 +128,11 @@ vector <int> Cargo :: cargoGroups()
         {
             currentWeight += cargoData[i][2];
             currentSize += cargoData[i][1];
-            group.push_back(cargoData[7]);
+            group.push_back(cargoData[i][7]);
         }
-    }*/
+    }
+
+    return group;
 }
 
 
