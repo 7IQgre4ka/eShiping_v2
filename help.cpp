@@ -103,6 +103,7 @@ int isSuitableForShipping(Cargo cargo)
         }
         return 2;
 }
+<<<<<<< HEAD
 std::vector <int> hl::cargoGroups()
 {
     std::vector <int> group;
@@ -132,4 +133,7 @@ std::vector <int> hl::cargoGroups()
         }
     }
 }
+=======
+
+>>>>>>> 741b59dd257e42b5965c540312f7f6bbccec347a
 

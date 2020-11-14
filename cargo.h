@@ -1,8 +1,9 @@
-#pragma once
 #ifndef CARGO_H
 #define CARGO_H
+
 #include "vector"
 #include "string"
+
 
 class Cargo
 {
@@ -18,17 +19,6 @@ class Cargo
         double cargoHumidity;
 
         int genId();
-      /*
-        string cargoType;
-        double cargoWeight;
-        double cargoSize;
-        pair <int, int > cargoTemperature;
-        int cargoHumidity;
-        int cargoTypeConvert(string cargoType);
-        string posibilityOfShipping(string cargoType, double cargoWeight, double cargoSize, pair <int, int > cargoTemperature, int cargoHumidity);
-        vector <int> cargoGroups(bool flag = false);
-        Cargo();*/
-
 };
 
 #endif // CARGO_H

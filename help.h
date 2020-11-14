@@ -1,11 +1,12 @@
-#pragma once
 #ifndef HELP_H
 #define HELP_H
-#include <string>
-#include <cargo.h>
 
-namespace hl{
-int typeConvert(std::string cargoType);
-int isSuitableForShipping(Cargo cargo);
-}
+using namespace std;
+
+class Help
+{
+    public:
+        Help();
+};
+
 #endif // HELP_H
