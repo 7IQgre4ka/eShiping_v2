@@ -9,15 +9,15 @@ using namespace std;
 class Cargo
 {
     public:
+        vector <vector < double > > cargoData;
         string cargoType;
         double cargoWeight;
         double cargoSize;
         pair <int, int > cargoTemperature;
         int cargoHumidity;
         int cargoTypeConvert(string cargoType);
-        string posibityOfShipping(string cargoType, double cargoWeight, double cargoSize, pair <int, int > cargoTemperature, int cargoHumidity);
-        int cargoData[6][1000];
-        queue <vector <int> > cargoGroups;
+        string posibilityOfShipping(string cargoType, double cargoWeight, double cargoSize, pair <int, int > cargoTemperature, int cargoHumidity);
+        vector <int> cargoGroups(bool flag = false);
         Cargo();
 
 };
