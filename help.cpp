@@ -1,6 +1,5 @@
 #include "help.h"
 
-Help::Help()
-{
+namespace help {
 
 }

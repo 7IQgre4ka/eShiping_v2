@@ -1,12 +1,9 @@
 #ifndef HELP_H
 #define HELP_H
 
-using namespace std;
+//using namespace std;
 
-class Help
-{
-    public:
-        Help();
-};
+namespace help{
 
+}
 #endif // HELP_H
