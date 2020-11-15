@@ -14,5 +14,5 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_cargoType_activated(const QString &arg1)
 {
-    QString inpurType = qs.toUtf8().constData();
+    //QString inpurType = qs.toUtf8().constData();
 }
